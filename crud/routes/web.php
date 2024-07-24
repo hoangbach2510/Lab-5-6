@@ -20,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::resource('san-pham', SanPhamController::class);
+Route::resource('danh-muc', DanhMucController::class);

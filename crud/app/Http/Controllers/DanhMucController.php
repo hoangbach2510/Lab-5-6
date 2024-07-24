@@ -18,7 +18,9 @@ class DanhMucController extends Controller
      */
     public function index()
     {
-       
+        $this ->view['danh_mucs'] = $this->danh_mucs->getAll();
+        return view('danhmuc.index', $this->view);
+        
     }
 
     /**
@@ -26,7 +28,7 @@ class DanhMucController extends Controller
      */
     public function create()
     {
-        //
+        return view('danhmuc.add', $this->view);
     }
 
     /**
@@ -34,7 +36,14 @@ class DanhMucController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate(
+            [
+                'ten_danh_muc' => ['required', 'string', 'max:255' ],
+            ],
+            [
+                'ten_san_pham.required' => 'Tên Sản Phẩm Không Được Để Trống',
+            ]
+        );
     }
 
     /**
