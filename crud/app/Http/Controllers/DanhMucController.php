@@ -41,7 +41,7 @@ class DanhMucController extends Controller
                 'ten_danh_muc' => ['required', 'string', 'max:255' ],
             ],
             [
-                'ten_san_pham.required' => 'Tên Sản Phẩm Không Được Để Trống',
+                'ten_danh_muc.required' => 'Tên Danh Mục Không Được Để Trống',
             ]
         );
     }

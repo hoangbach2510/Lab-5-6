@@ -17,7 +17,7 @@
             @csrf
             <div class="mb-3">
                 <label for="" class="form-label">Tên Danh Mục:</label>
-                <input type="text" class="form-control" name="ten_san_pham" placeholder="Nhập tên sản phẩm" value={{old('ten_san_pham')}}>
+                <input type="text" class="form-control" name="ten_danh_muc" placeholder="Nhập tên sản phẩm" value={{old('ten_danh_muc')}}>
             </div>
 
             <a href="{{route('danh-muc.index')}}">
